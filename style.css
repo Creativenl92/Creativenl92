@@ -396,3 +396,187 @@ button{cursor:pointer}
   }
 
 }
+/* =========================================================
+   FIX: INSIDE MODULE MUST USE FULL PROJECT GRID WIDTH
+   ========================================================= */
+
+.project-grid.dashboard-mode {
+  display: block;
+  width: 100%;
+}
+
+
+/* Dashboard directory uses full available width */
+
+.project-grid.dashboard-mode .dashboard-directory {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   SAME GRID AS MAIN PROJECT CARDS
+   ========================================================= */
+
+.project-grid.dashboard-mode .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+
+/* =========================================================
+   EXACT SAME CARD SIZE AS MAIN MODULE CARDS
+   ========================================================= */
+
+.project-grid.dashboard-mode .dashboard-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  min-height: 235px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: .25s;
+
+  box-shadow: 0 6px 18px rgba(11,31,58,.035);
+}
+
+
+/* Same top line */
+
+.project-grid.dashboard-mode .dashboard-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--accent);
+}
+
+
+/* Same hover */
+
+.project-grid.dashboard-mode .dashboard-card:hover {
+  transform: translateY(-5px);
+  border-color: #d7e1ef;
+  box-shadow: var(--shadow);
+}
+
+
+/* Same number/icon box */
+
+.project-grid.dashboard-mode .dashboard-number {
+  width: 47px;
+  height: 47px;
+
+  border-radius: 14px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f0f5fc;
+  color: var(--accent);
+
+  font-size: 14px;
+  font-weight: 900;
+
+  margin-bottom: 18px;
+}
+
+
+/* Same title */
+
+.project-grid.dashboard-mode .dashboard-card h3 {
+  font-size: 17px;
+  color: var(--navy);
+  margin: 0 0 7px;
+  line-height: 1.3;
+}
+
+
+/* Same description */
+
+.project-grid.dashboard-mode .dashboard-card p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+  min-height: 40px;
+}
+
+
+/* Open button */
+
+.project-grid.dashboard-mode .dashboard-open-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #f0f5fc;
+  color: var(--navy);
+
+  padding: 10px 12px;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  margin-top: auto;
+
+  transition: .2s;
+  text-decoration: none;
+}
+
+
+.project-grid.dashboard-mode .dashboard-open-btn:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+
+/* =========================================================
+   TABLET - SAME RESPONSIVE BEHAVIOUR
+   ========================================================= */
+
+@media(max-width:1050px) {
+
+  .project-grid.dashboard-mode .dashboard-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:760px) {
+
+  .project-grid.dashboard-mode .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media(max-width:500px) {
+
+  .project-grid.dashboard-mode .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
