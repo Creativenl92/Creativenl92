@@ -101,7 +101,9 @@ const projects = [
     accent: "#0f766e",
     iconBg: "#e8f8f5",
 
-    directUrl: "https://script.google.com/macros/s/AKfycbx4oQF22V_SAe7QG2LhyfX43Vu4KUYaN9U8O4mtTsaBC859kWXFyt2FTmvL4wsMsre7cA/exec"
+    password: "Cnl@92",
+
+     directUrl: "https://script.google.com/macros/s/AKfycbx4oQF22V_SAe7QG2LhyfX43Vu4KUYaN9U8O4mtTsaBC859kWXFyt2FTmvL4wsMsre7cA/exec"
   },
 
 
