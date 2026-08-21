@@ -198,6 +198,7 @@ let selectedProject = null;
    ========================================================= */
 
 function renderProjects() {
+  grid.classList.remove("dashboard-mode");
 
   grid.innerHTML = projects.map(project => `
     
@@ -371,6 +372,10 @@ togglePassword.addEventListener("click", () => {
    ========================================================= */
 
 function showProjectDashboards(project) {
+
+  if (!project) return;
+
+  grid.classList.add("dashboard-mode");
 
   if (!project) return;
 
