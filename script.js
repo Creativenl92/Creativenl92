@@ -95,28 +95,16 @@ const projects = [
       { name: "Audit Dashboard 10", description: "Management audit report", url: "#" }
     ]
   },
+{
+  id: "fms",
+  title: "FMS / MIDAP",
+  description: "Manage workflow, process monitoring and checklist systems.",
+  icon: "⌘",
+  accent: "#0891b2",
+  iconBg: "#e7f8fc",
 
-  {
-    id: "fms",
-    title: "FMS / MIDAP",
-    description: "Manage workflow, process monitoring and checklist systems.",
-    icon: "⌘",
-    accent: "#0891b2",
-    iconBg: "#e7f8fc",
-
-    dashboards: [
-      { name: "FMS Dashboard 01", description: "FMS overview", url: "#" },
-      { name: "FMS Dashboard 02", description: "Flow monitoring", url: "#" },
-      { name: "FMS Dashboard 03", description: "Checklist monitoring", url: "#" },
-      { name: "FMS Dashboard 04", description: "Onboarding monitoring", url: "#" },
-      { name: "FMS Dashboard 05", description: "FNF monitoring", url: "#" },
-      { name: "FMS Dashboard 06", description: "Process TAT report", url: "#" },
-      { name: "FMS Dashboard 07", description: "Pending process report", url: "#" },
-      { name: "FMS Dashboard 08", description: "Completed process report", url: "#" },
-      { name: "FMS Dashboard 09", description: "Checklist performance", url: "#" },
-      { name: "FMS Dashboard 10", description: "Management FMS report", url: "#" }
-    ]
-  },
+  url: "https://creativent.midap.in/index.php"
+},
 
   {
     id: "mis",
