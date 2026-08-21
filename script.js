@@ -101,61 +101,7 @@ const projects = [
     accent: "#0f766e",
     iconBg: "#e8f8f5",
 
-    // CHANGE INVENTORY PASSWORD HERE
-    password: "Inventory@123",
-
-    dashboards: [
-      {
-        name: "Inventory Dashboard 01",
-        description: "Inventory overview",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 02",
-        description: "Stock level monitoring",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 03",
-        description: "Inventory by location",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 04",
-        description: "Inventory by category",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 05",
-        description: "Brand wise inventory",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 06",
-        description: "Stock movement report",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 07",
-        description: "SKU analysis",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 08",
-        description: "Stock value report",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 09",
-        description: "Warehouse inventory",
-        url: "#"
-      },
-      {
-        name: "Inventory Dashboard 10",
-        description: "Management inventory report",
-        url: "#"
-      }
-    ]
+    directUrl: "https://script.google.com/macros/s/AKfycbx4oQF22V_SAe7QG2LhyfX43Vu4KUYaN9U8O4mtTsaBC859kWXFyt2FTmvL4wsMsre7cA/exec"
   },
 
 
