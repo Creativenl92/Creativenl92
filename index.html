@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CNL Dashboard - Centralized Business Dashboard Portal">
+  <meta name="theme-color" content="#0b1f3a">
+  <title>CNL Dashboard | Business Portal</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="CNL Dashboard Home">
+      <span class="brand-mark">CNL</span>
+      <span class="brand-copy">
+        <strong>CNL DASHBOARD</strong>
+        <small>Business Intelligence Portal</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
+    </nav>
+
+    <div class="secure-badge">
+      <span class="status-dot"></span>
+      <span>Secure Access</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>●</span> CENTRALIZED BUSINESS PLATFORM</div>
+        <h1>Welcome to <span>CNL Dashboard</span></h1>
+        <p class="hero-subtitle">Your central hub for all business dashboards and management systems.</p>
+        <p class="hero-description">Select a module below to access the required business system. Each module is protected with its own access controls.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="primary-btn">Explore Projects <span>→</span></a>
+          <a href="#about" class="secondary-btn">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="dashboard-window">
+          <div class="window-top">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mini-kpis">
+            <div><small>Projects</small><b>07</b></div>
+            <div><small>Modules</small><b>06</b></div>
+            <div><small>Status</small><b>Live</b></div>
+          </div>
+          <div class="mini-chart">
+            <div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div>
+            <div class="bar b4"></div><div class="bar b5"></div><div class="bar b6"></div>
+            <div class="chart-line"></div>
+          </div>
+          <div class="mini-table">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">PROJECT DIRECTORY</div>
+          <h2>Business Systems</h2>
+        </div>
+        <p>Choose a project to continue. Access is controlled separately for each module.</p>
+      </div>
+
+      <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <section id="about" class="info-section">
+      <div class="info-card">
+        <div class="info-icon">✦</div>
+        <div>
+          <div class="eyebrow">ABOUT THE PORTAL</div>
+          <h2>One secure entry point for your business systems.</h2>
+          <p>CNL Dashboard is designed as a centralized gateway. Individual projects can remain on their own codebases while this portal provides one professional entry point.</p>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div><strong>07</strong><span>Project Spaces</span></div>
+        <div><strong>24/7</strong><span>Portal Access</span></div>
+        <div><strong>∞</strong><span>Future Modules</span></div>
+      </div>
+    </section>
+
+    <section id="support" class="support-section">
+      <div class="support-copy">
+        <div class="eyebrow">NEED ASSISTANCE?</div>
+        <h2>Access support when you need it.</h2>
+        <p>For project access or technical support, contact your CNL Dashboard administrator.</p>
+      </div>
+      <a class="support-btn" href="mailto:support@cnldashboard.in">Contact Support →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>CNL Dashboard</strong>
+      <span>Centralized Business Dashboard Portal</span>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
+    </div>
+    <small>© <span id="year"></span> CNL Dashboard. All rights reserved.</small>
+  </footer>
+
+  <div class="modal-backdrop" id="passwordModal" hidden>
+    <div class="password-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-lock">🔒</div>
+      <div class="eyebrow">SECURE PROJECT ACCESS</div>
+      <h3 id="modalTitle">Enter Password</h3>
+      <p id="modalDescription">Enter the password for this project.</p>
+      <form id="passwordForm">
+        <label for="passwordInput">Password</label>
+        <div class="password-field">
+          <input id="passwordInput" type="password" autocomplete="current-password" placeholder="Enter project password" required>
+          <button type="button" id="togglePassword" aria-label="Show password">Show</button>
+        </div>
+        <div class="error-message" id="errorMessage" role="alert"></div>
+        <button class="login-btn" type="submit">Continue <span>→</span></button>
+      </form>
+      <p class="security-note">🔐 Project passwords should be verified server-side in production.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
