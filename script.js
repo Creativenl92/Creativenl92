@@ -102,8 +102,7 @@ const projects = [
   icon: "⌘",
   accent: "#0891b2",
   iconBg: "#e7f8fc",
-
-  url: "https://creativent.midap.in/index.php"
+  directUrl: "https://creativent.midap.in/index.php"
 },
 
   {
@@ -245,12 +244,17 @@ function openProject(id) {
 
   if (!selectedProject) return;
 
+  // FMS / MIDAP → Directly open without password
+  if (selectedProject.id === "fms") {
+    window.location.href = "https://creativent.midap.in/index.php";
+    return;
+  }
 
+  // All other modules → Password required
   modalTitle.textContent = selectedProject.title;
 
   modalDescription.textContent =
     `Enter the password for ${selectedProject.title}.`;
-
 
   passwordInput.value = "";
 
@@ -264,11 +268,8 @@ function openProject(id) {
 
   document.body.style.overflow = "hidden";
 
-
   setTimeout(() => {
-
     passwordInput.focus();
-
   }, 80);
 }
 
