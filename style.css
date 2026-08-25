@@ -29,9 +29,20 @@ button{cursor:pointer}
 .main-nav a:hover,.main-nav a.active{color:var(--navy);background:#f0f4fa}
 .secure-badge{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:9px 13px;border-radius:999px;background:#fff;font-size:12px;font-weight:700;color:#41516a}
 .status-dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px #dcfce7}
-.hero{min-height:590px;padding:78px 8vw 65px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px;overflow:hidden}
-.eyebrow{font-size:10px;letter-spacing:2px;font-weight:900;color:#4c6a91;margin-bottom:13px}
-.eyebrow span{color:#2563eb}
+.hero {
+    min-height: 590px;
+    padding: 78px 8vw 65px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 55px;
+    overflow: hidden;
+
+    background-image: url("hero-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .hero h1{font-size:clamp(40px,5vw,67px);line-height:1.02;letter-spacing:-2.8px;margin:0 0 22px;color:var(--navy);max-width:720px}
 .hero h1 span{color:var(--blue)}
 .hero-subtitle{font-size:20px;line-height:1.45;font-weight:650;color:#33445d;max-width:650px;margin:0 0 13px}
